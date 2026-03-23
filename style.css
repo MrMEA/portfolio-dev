@@ -39,3 +39,31 @@ section {
     background: white;
     border-radius: 10px;
 }
+/* PROJECTS */
+.projects-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
