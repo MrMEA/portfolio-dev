@@ -1,79 +1,217 @@
-html {
-    scroll-behavior: smooth;
-}
 
 body {
-    font-family: Arial;
     margin: 0;
-    background-color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #e2e8f0;
+    background: radial-gradient(circle at center, #020617, #020617);
 }
 
-/* NAVBAR */
+p {
+    color: #94a3b8;
+}
+h1, h2, h3 {
+    color: #f1f5f9;
+}
+h2 {
+    margin-bottom: 10px;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background: #222;
-    color: white;
-    padding: 15px 30px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
+    padding: 20px;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 60px;
-    background: #ddd;
+    padding: 120px 20px;
+}
+
+.subtitle {
+    color: #38bdf8;
+    margin-top: 10px;
+}
+
+
+header h1 {
+    font-size: 48px;
 }
 
 /* SECTIONS */
 section {
-    margin: 40px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
+    margin-top: 60px;
 }
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background: #1e293b;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
 /* PROJECTS */
 .projects-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .project-card {
-    background: #fff;
+    background: rgba(30,41,59,0.6);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
     transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
+/* Hover */
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(56,189,248,0.2);
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    border: none;
-    background: #222;
-    color: white;
-    cursor: pointer;
+/* MOCKUP */
+.mockup {
+    background: #020617;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #1e293b;
+}
+
+.mockup::before {
+    content: "";
+    display: block;
+    height: 6px;
+    background: #334155;
     border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.mockup img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 18px;
+    border: none;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
     transition: 0.3s;
 }
 
+/* Hover Effekt */
 button:hover {
-    background: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(99,102,241,0.5);
+}
+
+/* INPUT */
+input {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: white;
+}
+
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills span {
+    background: #0f172a;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    border: 1px solid #1e293b;
+    color: #94a3b8;
+    transition: 0.2s;
+}
+
+/* Hover */
+.skills span:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 28px;
+    color: #38bdf8;
+}
+
+.stat p {
+    font-size: 14px;
+}
+
+
+
+
+.social-bar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 50%;
+    color: #e2e8f0;
+    transition: 0.2s;
+}
+
+.social-bar a:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
 }
