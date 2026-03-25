@@ -308,12 +308,3 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    display: none;
-  }
-}
