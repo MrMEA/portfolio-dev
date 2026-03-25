@@ -15,31 +15,75 @@
 </head>
 
 <body>
+    <div class="progress-bar"></div>
+    <div class="matrix"></div>
 
 <div class="container">
 
     <!-- NAV -->
     <nav>
         <h2><i data-lucide="code"></i> Majd</h2>
+ <ul class="nav-links">
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projekte</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
+
     </nav>
 
     <!-- HEADER -->
-    <header>
+    <header class="hero">
+
+    <div class="hero-left">
         <h1>Hi, ich bin Majd</h1>
-           <p class="subtitle">
-        Informatikstudent • Web Developer • Automation
-    </p>
 
-        <div class="project-buttons">
-            <button onclick="scrollToContact()">Kontakt</button>
+        <p class="subtitle">
+            Informatikstudent • Web Developer • Automation
+        </p>
 
-            <a href="https://github.com/MrMEA" target="_blank">
-                <button><i data-lucide="github"></i> GitHub</button>
+        <div class="hero-buttons">
+
+            <a href="https://github.com/MrMEA" target="_blank" class="github-btn">
+                 <button>GitHub</button>
             </a>
         </div>
-    </header>
+    </div>
 
+    <div class="hero-right">
+        <img src="images/me.jpg" alt="Majd">
+    </div>
 
+</header>
+
+    <section class="value">
+
+    <div class="value-box">
+        <h3>Web Apps</h3>
+        <p>Moderne Anwendungen mit Fokus auf Performance und UX.</p>
+    </div>
+
+    <div class="value-box">
+        <h3>Automation</h3>
+        <p>Automatisierte Prozesse für Unternehmen.</p>
+    </div>
+
+    <div class="value-box">
+        <h3>Real Projects</h3>
+        <p>Praxisorientierte Lösungen statt Theorie.</p>
+    </div>
+
+</section>
+
+<section class="cta-banner">
+
+    <p>Ich bin aktuell offen für Werkstudentenstellen und Projekte</p>
+
+    <button onclick="scrollToContact()">Kontakt aufnehmen</button>
+
+</section>
+
+<hr class="divider">
   
     <!-- ABOUT -->
     <section id="about" class="fade-in">
@@ -59,6 +103,8 @@
     </p>
 </section>
 
+<hr class="divider">
+
     <!-- SKILLS -->
     <section id="skills" class="fade-in">
         <h2>Skills</h2>
@@ -74,6 +120,8 @@
             <span>Node.js</span>
         </div>
     </section>
+
+    <hr class="divider">
 
     <!-- PROJECTS -->
     <section id="projects" class="fade-in">
@@ -119,6 +167,8 @@
         </div>
     </section>
 
+    <hr class="divider">
+
 
       <section class="stats fade-in">
 
@@ -138,6 +188,8 @@
     </div>
 
 </section>
+
+<hr class="divider">
 
     <!-- CONTACT -->
     <section id="contact" class="fade-in">
