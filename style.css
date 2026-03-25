@@ -19,7 +19,8 @@ h2 {
 
 
 .container {
-    max-width: 1000px;
+    width: 100%;
+  max-width: 1200px;
     margin: auto;
     padding: 40px 20px;
     
@@ -305,4 +306,14 @@ input {
 
 html {
     scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
 }
