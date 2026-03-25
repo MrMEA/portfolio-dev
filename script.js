@@ -23,8 +23,6 @@ function reveal() {
     });
 }
 
-window.addEventListener("scroll", reveal);
-
 // Dummy request (Frontend)
 function sendRequest() {
     let name = document.getElementById("name").value;
@@ -45,8 +43,22 @@ document.addEventListener("mousemove", (e) => {
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
 
+
 window.addEventListener("scroll", () => {
 
+    // 1. REVEAL
+    let elements = document.querySelectorAll(".fade-in");
+
+    elements.forEach(el => {
+        let top = el.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
+
+        if (top < windowHeight - 50) {
+            el.classList.add("show");
+        }
+    });
+
+    // 2. NAV
     let current = "";
 
     sections.forEach(section => {
@@ -58,17 +70,13 @@ window.addEventListener("scroll", () => {
     });
 
     navLinks.forEach(link => {
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + current
+        );
     });
 
-});
-
-window.addEventListener("scroll", () => {
-
+    // 3. PROGRESS BAR
     let scrollTop = document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
