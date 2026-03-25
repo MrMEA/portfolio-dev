@@ -67,37 +67,6 @@ window.addEventListener("scroll", () => {
 
 });
 
-
-
-
-function createMatrix() {
-    const matrix = document.querySelector(".matrix");
-
-    setInterval(() => {
-
-        let line = document.createElement("div");
-
-        let binary = "";
-        for (let i = 0; i < 12; i++) {
-            binary += Math.random() > 0.5 ? "1" : "0";
-        }
-
-        line.textContent = binary;
-
-        line.style.opacity = 0.4;
-        line.style.marginBottom = "8px";
-
-        matrix.appendChild(line);
-
-        setTimeout(() => {
-            line.remove();
-        }, 3000);
-
-    }, 200); // ← langsamer
-}
-
-createMatrix();
-
 window.addEventListener("scroll", () => {
 
     let scrollTop = document.documentElement.scrollTop;
@@ -107,3 +76,4 @@ window.addEventListener("scroll", () => {
 
     document.querySelector(".progress-bar").style.width = progress + "%";
 });
+
